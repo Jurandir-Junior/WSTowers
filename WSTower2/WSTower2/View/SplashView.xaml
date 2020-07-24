@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             ControlTemplate="{StaticResource Cssbackground}"
+             mc:Ignorable="d"
+             x:Class="WSTower2.View.SplashView">
+    <ContentPage.Resources>
+            <ResourceDictionary>
+                <ControlTemplate
+                    x:Key="Cssbackground">
+                    <Grid>
+                        <magic:GradientView 
+                            VerticalOptions="FillAndExpand">
+                            <magic:GradientView.GradientSource>
+                                <magic:CssGradientSource>
+                                    <x:String>
+                                        <![CDATA[radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244))]]>
+                                    </x:String>
+                                </magic:CssGradientSource>
+                            </magic:GradientView.GradientSource>
+                        </magic:GradientView>
+                        <ContentPresenter/>
+                    </Grid>
+                </ControlTemplate>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+    <StackLayout>
+        <!--<Image Source="logoWS.png" Margin="50,50,50,0" WidthRequest="500" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />-->
+        <Image Source="WSTowerswhite.png" Margin="50,50,50,0" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

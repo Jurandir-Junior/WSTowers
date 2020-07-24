@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             ControlTemplate="{StaticResource Cssbackground}"
+             mc:Ignorable="d"
+             x:Class="WSTower2.View.EstadioInfoView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                    x:Key="Cssbackground">
+                <Grid>
+                    <magic:GradientView 
+                            VerticalOptions="FillAndExpand">
+                        <magic:GradientView.GradientSource>
+                            <magic:CssGradientSource>
+                                <x:String>
+                                    <![CDATA[radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244))]]>
+                                </x:String>
+                            </magic:CssGradientSource>
+                        </magic:GradientView.GradientSource>
+                    </magic:GradientView>
+                    <ContentPresenter/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label x:Name="_nome" Text="{Binding Nome}" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="30" FontAttributes="Bold" Margin="0,40,0,20"/>
+        <Frame BackgroundColor="White" CornerRadius="10" HorizontalOptions="CenterAndExpand" Margin="20">
+            <Grid ColumnSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Localização:" FontSize="22" FontAttributes="Bold"/>
+                <Label Grid.Column="1" x:Name="_local" Text="{Binding Local}" FontSize="22"/>
+
+                <Label Grid.Row="1" Text="Capacidade:" FontSize="22" FontAttributes="Bold"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="_capacidade" Text="{Binding Capacidade}" FontSize="22"/>
+
+                <Label Grid.Row="2" Text="Proprietário:" FontSize="22" FontAttributes="Bold"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="_proprietario" Text="{Binding Proprietario}" FontSize="22"/>
+
+                <Label Grid.Row="3" Text="Descrição:" FontSize="22" FontAttributes="Bold"/>
+                <Editor Grid.Row="4" Grid.ColumnSpan="2" x:Name="_descricao" Text="{Binding Descricao}" IsReadOnly="True" FontSize="22"/>
+            </Grid>
+        </Frame>
+        <Button Text="Voltar" VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center" 
+                    WidthRequest="300" 
+                    BackgroundColor="#000000"
+                    Opacity="1"
+                    TextColor="White" 
+                    BorderWidth="5" 
+                    CornerRadius="10" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

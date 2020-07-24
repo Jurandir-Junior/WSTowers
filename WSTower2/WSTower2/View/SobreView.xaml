@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
+             x:Class="WSTower2.View.SobreView">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Aspect="AspectFill" Source="estadio1.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="arrow_89_64.png" Margin="25" WidthRequest="20" HeightRequest="13" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
+        <pv:PancakeView x:Name="DetailsView" Grid.Row="1" CornerRadius="30,30,0,0" Padding="35,35,35,0" Margin="0,-40,0,0" 
+                        BackgroundColor="White" VerticalOptions="FillAndExpand">
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+                <StackLayout Spacing="15" HorizontalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                            <Image HeightRequest="12" WidthRequest="8" Source="address.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                            <Label Text="Rua Londres" FontSize="15" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout Grid.Row="1" Spacing="15" >
+                        <Label Text="Inovação e Realização são palavras que estão na alma da WSTower.
+                                        E aliando essa característica com a visão e experiência, os resultados ao longo de todos esses 40 anos são
+                                        empreendimentos construídos com a mais alta qualidade.Tudo isso com a integração equilibrada entre Arquitetura, Design, Segurança e o custo benefício de cada obra.
+                               " FontSize="19" FontFamily="ThemeFontBold" TextColor="#515151" />
+                    </StackLayout>
+                    <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
+                    <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                        <StackLayout>
+                            <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
+                                <Image WidthRequest="16" HeightRequest="16" Source="phone.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </pv:PancakeView>
+                            <Label Text="(11) 1234-5678" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
+                                <Image WidthRequest="16" HeightRequest="16" Source="email.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </pv:PancakeView>
+                            <Label Text="wstowers@wstowers.com" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </pv:PancakeView>
+    </Grid>
+
+</ContentPage>

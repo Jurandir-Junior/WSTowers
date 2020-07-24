@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:WSTower2.CustomRenderer"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             ControlTemplate="{StaticResource Cssbackground}"
+             mc:Ignorable="d"
+             x:Class="WSTower2.View.MainNovosView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                    x:Key="Cssbackground">
+                <Grid>
+                    <magic:GradientView 
+                            VerticalOptions="FillAndExpand">
+                        <magic:GradientView.GradientSource>
+                            <magic:CssGradientSource>
+                                <x:String>
+                                    <![CDATA[radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244))]]>
+                                </x:String>
+                            </magic:CssGradientSource>
+                        </magic:GradientView.GradientSource>
+                    </magic:GradientView>
+                    <ContentPresenter/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+            <StackLayout>
+                <ImageButton BackgroundColor="Transparent" Source="arrow_89_64.png" Margin="20,30,0,0" WidthRequest="20" HeightRequest="13" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="Button_Clicked"/>
+            </StackLayout>
+        <StackLayout Orientation="Vertical" Margin="0,0,0,20" HorizontalOptions="Center" VerticalOptions="Center" Padding="10">
+            <StackLayout Margin="0,30">
+                <Image Source="WSTowerswhite.jpg" WidthRequest="210" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Cadastro de Estádios" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Padding="10" HorizontalOptions="Start">
+                <Frame Padding="5" CornerRadius="10">
+                    <local:CustomEntry x:Name="nome" Placeholder="Estádio:" FontSize="16" WidthRequest="180" ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="10" Orientation="Horizontal">
+                <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="Start">
+                    <Frame Padding="5" CornerRadius="10">
+                        <local:CustomEntry x:Name="capacidade" Placeholder="Capacidade:" FontSize="16" WidthRequest="180" ClearButtonVisibility="WhileEditing"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Vertical" HorizontalOptions="End">
+                    <Frame Padding="5" CornerRadius="10">
+                        <local:CustomEntry x:Name="local" Placeholder="Local:" FontSize="16" WidthRequest="100" ClearButtonVisibility="WhileEditing"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Padding="10" Orientation="Horizontal">
+                <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="Start">
+                    <Frame Padding="5" CornerRadius="10">
+                        <local:CustomEntry x:Name="projetista" Placeholder="Projetista:" FontSize="16" WidthRequest="150" ClearButtonVisibility="WhileEditing"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout  Grid.Column="2" Orientation="Vertical" HorizontalOptions="End">
+                    <Frame Padding="5" CornerRadius="10">
+                        <local:CustomEntry x:Name="proprietario" Placeholder="Proprietario:" FontSize="16" WidthRequest="130" ClearButtonVisibility="WhileEditing"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,15">
+                <CheckBox IsChecked="False" Color="White" x:Name="Status_Reformando"/>
+                <Label Text="Reformando" HorizontalTextAlignment="Start" FontSize="12" VerticalTextAlignment="Center" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Padding="10" Margin="15,5">
+            <Button Text="Cadastrar" VerticalOptions="CenterAndExpand" HorizontalOptions="End" WidthRequest="140" BackgroundColor="#3578E5" Opacity="1" TextColor="White" BorderWidth="5" CornerRadius="10" Clicked="btnCadastrar_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

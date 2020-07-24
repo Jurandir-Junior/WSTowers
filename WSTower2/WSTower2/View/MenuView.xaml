@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             ControlTemplate="{StaticResource Cssbackground}"
+             mc:Ignorable="d"
+             x:Class="WSTower2.View.MenuView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                    x:Key="Cssbackground">
+                <Grid>
+                    <magic:GradientView 
+                            VerticalOptions="FillAndExpand">
+                        <magic:GradientView.GradientSource>
+                            <magic:CssGradientSource>
+                                <x:String>
+                                    <![CDATA[radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244))]]>
+                                </x:String>
+                            </magic:CssGradientSource>
+                        </magic:GradientView.GradientSource>
+                    </magic:GradientView>
+                    <ContentPresenter/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Image Source="WSTowerswhite.png" WidthRequest="250" Margin="0,50,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Color="White" CornerRadius="10"/>
+            <ImageButton Source="stadium_icon_png_11.jpg" WidthRequest="100" Margin="0,0,0,40" BackgroundColor="Transparent"/>
+            <Label Text="Estádios concluídos" FontSize="22" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+            <ContentView>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button1_Clicked"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
+            <BoxView Color="White" Grid.Column="1" CornerRadius="10"/>
+            <ImageButton Grid.Column="1" Source="Engineering_Icon.png" WidthRequest="100" Margin="0,0,0,50" BackgroundColor="Transparent"/>
+            <Label Grid.Column="1" Text="Estádios em reforma" FontSize="22" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+            <ContentView Grid.Column="1">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button2_Clicked"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
+            <BoxView Color="White" Grid.Row="1" CornerRadius="10"/>
+            <ImageButton Grid.Row="1" Source="new_icon.png" WidthRequest="100" Margin="0,9,0,40" BackgroundColor="Transparent"/>
+            <Label Grid.Row="1" Text="Novos Projetos" FontSize="22" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+            <ContentView Grid.Row="1">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button3_Clicked"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
+            <BoxView Color="White" Grid.Column="1" Grid.Row="1" CornerRadius="10"/>
+            <Image Grid.Column="1" Grid.Row="1" Source="information_icon_black.jpg" WidthRequest="100" Margin="0,9,0,40"/>
+            <Label Grid.Column="1" Grid.Row="1" Text="Sobre" FontSize="22" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+            <ContentView Grid.Column="1" Grid.Row="1">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button4_Clicked"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+        </Grid>
+    </StackLayout>
+</ContentPage>

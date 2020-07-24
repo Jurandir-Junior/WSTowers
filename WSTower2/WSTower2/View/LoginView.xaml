@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:WSTower2.CustomRenderer"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             ControlTemplate="{StaticResource Cssbackground}"
+             mc:Ignorable="d"
+             x:Class="WSTower2.View.LoginView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                    x:Key="Cssbackground">
+                <Grid>
+                    <magic:GradientView 
+                            VerticalOptions="FillAndExpand">
+                        <magic:GradientView.GradientSource>
+                            <magic:CssGradientSource>
+                                <x:String>
+                                    <![CDATA[radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244))]]>
+                                </x:String>
+                            </magic:CssGradientSource>
+                        </magic:GradientView.GradientSource>
+                    </magic:GradientView>
+                    <ContentPresenter/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <StackLayout Margin="0,50,0,10">
+            <Image Source="WSTowerswhite.png" Margin="30,30,30,0" WidthRequest="240" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Padding="50">
+            <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0,15" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="enviar.png" WidthRequest="25"/>
+                    <!--<Entry Placeholder="Usuário:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>-->
+                    <local:CustomEntry x:Name="email" Placeholder="Email:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="White" BorderColor="#FFF" Padding="5" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand" >
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image Source="senha.png" WidthRequest="25" />
+                    <!--<Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" MaxLength="10" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" />-->
+                    <local:CustomEntry x:Name="senha" IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+            <Button Text="Logar" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center" 
+                    WidthRequest="140" 
+                    BackgroundColor="#3578E5"
+                    Opacity="1"
+                    TextColor="White" 
+                    BorderWidth="5" 
+                    CornerRadius="10"
+                    Command="{Binding btnLoginCommand}"
+                    Clicked="btnLogar_Clicked"/>
+
+        <Button Text="Cadastrar" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center" 
+                    TextColor="#ffffff"
+                    BackgroundColor="#000000"
+                    WidthRequest="110"
+                    CornerRadius="10"
+                    Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>
