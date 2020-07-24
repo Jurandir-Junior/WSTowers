@@ -53,7 +53,7 @@
                 <StackLayout Orientation="Horizontal" Spacing="10">
                     <Image Source="senha.png" WidthRequest="25"/>
                     <!--<Entry IsPassword="true" Placeholder="Senha:" PlaceholderColor="Black" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>-->
-                    <local:CustomEntry x:Name="senha" Placeholder="Senha:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing"/>
+                    <local:CustomEntry x:Name="senha" Placeholder="Senha:" PlaceholderColor="Black" FontAttributes="None" FontSize="16" WidthRequest="200" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

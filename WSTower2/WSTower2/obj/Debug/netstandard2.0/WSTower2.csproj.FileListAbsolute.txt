@@ -104,6 +104,6 @@ E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\nets
 E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\View\MainNovosView.xaml.g.cs
 E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\View\MainReformaView.xaml.g.cs
 E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\View\MenuView.xaml.g.cs
-E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\WSTower2.csprojAssemblyReference.cache
 E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\WSTower2.csproj.CoreCompileInputs.cache
 E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Users\Junior\Documents\Rinha d Galo\WSTower2\WSTower2\WSTower2\obj\Debug\netstandard2.0\WSTower2.csprojAssemblyReference.cache

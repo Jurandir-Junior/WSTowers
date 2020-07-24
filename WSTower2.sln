@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSTower2.Android", "WSTower2\WSTower2.Android\WSTower2.Android.csproj", "{F34CBA54-1DD5-4500-A349-A13A2D2C2B40}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9400AB7E-CDE8-4B47-B87E-30214C7E203D} = {9400AB7E-CDE8-4B47-B87E-30214C7E203D}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSTower2", "WSTower2\WSTower2\WSTower2.csproj", "{652FCFA1-F00A-4EDF-A96C-2E741ADBD511}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API\API.csproj", "{9400AB7E-CDE8-4B47-B87E-30214C7E203D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +30,10 @@ Global
 		{652FCFA1-F00A-4EDF-A96C-2E741ADBD511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{652FCFA1-F00A-4EDF-A96C-2E741ADBD511}.Release|Any CPU.Build.0 = Release|Any CPU
 		{652FCFA1-F00A-4EDF-A96C-2E741ADBD511}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9400AB7E-CDE8-4B47-B87E-30214C7E203D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9400AB7E-CDE8-4B47-B87E-30214C7E203D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9400AB7E-CDE8-4B47-B87E-30214C7E203D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9400AB7E-CDE8-4B47-B87E-30214C7E203D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
